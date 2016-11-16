@@ -1,19 +1,30 @@
 #include<iostream>
 #include<stdlib.h>
-
-int main(){
-  int matrix[3][3];
-  int fil,col;
-  int num;
-  for(fil=0;fil<3;fil++){
-    for(col=0;col<3;col++){
-      num=rand()%9;
-      std::cout<<num<<" ";
-      matrix[fil][col]= num;
-      
-    
-    }
-  }
-  std::cin>>fil;
-  return 0;
+#include<time.h>
+ 
+ int main(){
+   int matrix[3][3];
+   int fil,col;
+   int num, cont, semilla;
+   srand(time(0));
+   for(cont=0; cont<10; cont++){
+               num=rand()%10;
+               std::cout<<num<<" ";
+               
 }
+std::cout<<"\n";
+
+while (true){
+   for(fil=0;fil<3;fil++){
+                          std::cout<<"\n";
+     for(col=0;col<3;col++){
+       num=rand()%2;
+       std::cout<<num<<" ";
+       matrix[fil][col]= num;
+       
+       }
+     }
+   }
+   std::cin>>fil;
+   return 0;
+ }
